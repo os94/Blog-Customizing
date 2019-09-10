@@ -247,7 +247,7 @@
 
 									<div id="disqus_thread"></div>
 
-									<strong class="tit_reply">댓글
+									<strong class="tit_reply" style="display:none">댓글
 										<button type="button" class="btn_reply" onclick="$.Area.Comment.changeStatus();[##_article_rep_rp_link_##]">
 											<s_rp_count>[##_article_rep_rp_cnt_##]</s_rp_count>
 											<span class="ico_skin ico_reply">댓글펼치기</span>
@@ -257,7 +257,7 @@
 
 
 									<!-- 대체텍스트 댓글펼치기/댓글접기 변경 -->
-									<s_rp>
+									<s_rp style="display:none">
 										<button type="button" class="btn_replymore">이전 댓글 보기</button>
 										<s_rp_container>
 											<ul class="list_reply">
@@ -529,7 +529,12 @@
 								<!-- 최근에 달린 댓글 -->
 								<div class="box_aside">
 									<strong>최근에 달린 댓글</strong>
-									<ul class="list_board">
+									
+									<div id="RecentComments" class="dsq-widget link_board">
+										<script type="text/javascript" src="https://os94-tistory.disqus.com/recent_comments_widget.js?num_items=3&hide_mods=0&hide_avatars=1&avatar_size=0&excerpt_length=20"></script>
+									</div>
+									
+									<ul class="list_board" style="display:none">
 										<s_rctrp_rep>
 											<li><a href="[##_rctrp_rep_link_##]" class="link_board">[##_rctrp_rep_desc_##]</a></li>
 										</s_rctrp_rep>
